@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="">
+    <div>
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Full Name">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="emil"placeholder="Email Address">
+    </div>
+    <div>
+        <label>Search</label>
+        <input type="search" name="search" placeholder="Search Here...">  
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" id="password"
+        placeholder="Password">
+        <span class="material-symbols-outlined" style="cursor:pointer;"
+        id="passwordBtn" onclick="fun()">visibility</span>
+    </div>
+    <div>
+        <label>Age</label>
+        <input type="number" name="age" value="30" num="20"max="40"
+        placeholder="Person Age">
+    </div>
+    <div>
+        <label>URL</label>
+        <input tyep="url" name="url" placeholder="URL">
+    </div>
+    <div>
+        <label>Phone</label>
+        <input type="tel"name="phone" placeholder="Phone Number" pattern="[6-9]
+        {1}[0-9]{9}">
+    </div>
+    <div>
+        <input type="reset"value="Reset">
+        <input type="button"value="Button" onclick="alert('Hello world')">
+        <input type="submit"value="Submit">
+    </div>
+    <div>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="alert('Hello World2')">Button </button>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        var password=documnet.getElementById("password")
+        var passwordBtn=document.getElementById("passwordBtn")
+        function fun(){
+            if(passwordbtn.innerHtml=="visibility"){
+              password.type="text"
+              passwordbtn.innerHtml="visibility_off"
+
+
+            }
+            else{
+                password.type="password"
+                passwordBtn.innerHtml="visibility"
+
+            }
+        }
+        </script>
+    
+</body>
+</html>
