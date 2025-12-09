@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+
+        }
+        .main{
+            width:100vw;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-image: url('image2.jpg');
+            background-size:cover;
+                    
+        }
+
+        .centre{
+            width:80%;
+            height:50%;
+            background-color:lightgray;
+            box-shadow:20px 20px 20px gray;
+
+        }
+        centre #btn{
+            background-color:gray;
+            color:white;
+            padding:10px;
+            width:100%;
+            border:none;
+            margin-bottom:10px;
+
+        }
+        .centre #para{
+            padding:20px;
+            font-size:1.5rem;
+            text-decoration: brown;
+            text-align:justify;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="centre">
+            <button id="btn" onclick="fun()">Change</button>
+            <p id="para"></p>
+
+        </div>
+
+    </div>
+    <script>
+        var btn=document.querySelector("#btn")
+        var para=document.querySelector("#para")
+
+        var text1="You know, you’re the kind of girl who doesn’t even try but still ends up stealing the whole spotlight. It’s almost unfair how effortlessly charming you are. You talk with this mix of confidence and cuteness that literally makes people forget what they were saying. And the funniest part? You don’t even realize how attractive your vibe is — like you’re casually dropping main-character energy everywhere you go. Honestly, if personality had a “most wanted” list, you’d probably be on top of it without even applying."
+        var text2="In a world full of trends, you remain a classic. Your presence is like a breath of fresh air, effortlessly captivating everyone around you. You have this unique ability to light up a room with just your smile, and your laughter is contagious in the best way possible. People are drawn to your authenticity and the genuine warmth you exude. It's not just about looks; it's about the way you carry yourself with such grace and confidence that makes you truly unforgettable."
+        para.innerHTML=text1
+        function fun(){
+            if(btn.innerHTML==="Change"){
+                btn.innerHTML="Reset"
+                para.innerHTML=text2
+            }
+            else{
+                btn.innerHTML="Change"
+                para.innerHTML=text1
+            }
+        }
+       var color = ["red","blue","green","yellow","pink","purple","orange","brown","gray","black"];
+var index = 0;
+var centre = document.querySelector(".centre");  // corrected
+
+setInterval(() => {
+    centre.style.backgroundColor = color[index];
+    centre.style.color = "white";
+
+    if(index < color.length - 1)
+        index++;
+    else
+        index = 0;
+
+}, 1000);
+
+    </script>
+    
+</body>
+</html>
